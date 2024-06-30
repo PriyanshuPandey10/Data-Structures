@@ -52,6 +52,47 @@ class SLL:
             print(temp.item,end=' ')
             temp=temp.next
         print()
+    
+    #delete_first() => To delete the first element of a list
+    def delete_first(self):
+        if self.start is not None:
+            self.start =self.start.next
+
+    #delete_last() => To delete the last element of a list
+    def delete_last(self):
+        if self.start is None:
+            pass
+        elif self.start.next is None:
+            self.start =None
+        else:
+            temp=self.start
+            while temp.next.next is not None:
+                temp=temp.next
+            temp.next=None
+
+    #delete_item() => To delete specified element from a list
+    def delete_item(self,data):
+        if self.start is None:
+            pass
+        elif self.start.next is None:
+            if self.start.item ==data:
+                self.start=None
+        else:
+            temp=self.start
+            if temp.item==data:
+                self.start=temp.next
+            else:
+                while temp.next is not None:
+                    if temp.next.item ==data:
+                        temp.next =temp.next.next
+                        break
+                    temp=temp.next
+
+
+
+
+
+
 
 
 
@@ -68,6 +109,12 @@ my_list.insert_at_start(5)
 my_list.insert_at_end(15)
 my_list.insert_at_end(20)
 my_list.insert_after(my_list.search(5), 100)
+my_list.print_list()
+my_list.delete_first()
+my_list.print_list()
+my_list.delete_last()
+my_list.print_list()
+my_list.delete_item(23)
 my_list.print_list()
 
 
