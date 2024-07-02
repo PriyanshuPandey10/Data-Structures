@@ -59,6 +59,46 @@ class DLL:
             print(temp.item,end=' ')
             temp=temp.next
 
+    #Define a method delete_first() to delete the first element from the list
+    def delete_first(self):
+        if self.start is not None:
+            self.start=self.start.next
+            if self.start is not None:
+                self.start.prev=None
+
+    #Define a method delete_last() to delete the last element from the list
+    def delete_last(self):
+        if self.start is None:
+            pass
+        elif self.start.next is None:
+            self.start=None
+        else:
+            temp=self.start
+            while temp.next is not None:
+                temp=temp.next
+            temp.prev.next=None
+
+    #Define a method delete_item() to delete the specified element from the list
+    def delete_item(self,data):
+        if self.start is None:
+            pass
+        else:
+            temp=self.start
+            while temp is not Node:
+                if temp.item==data:
+                    if temp.next is not None:
+                        temp.next.prev=temp.prev
+                    if temp.prev is not None:
+                        temp.prev.next=temp.next
+                    else:
+                        self.start=temp.next
+                    break
+                temp=temp.next
+
+
+    
+
+
 
         
 
@@ -69,4 +109,7 @@ my_list.insert_at_start(45)
 my_list.insert_at_last(100)
 my_list.insert_at_last(200)
 my_list.insert_after(my_list.search(100),150)
+my_list.delete_first()
+my_list.delete_last()
+my_list.delete_item(100)
 my_list.print_list()
