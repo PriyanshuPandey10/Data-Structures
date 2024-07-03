@@ -103,7 +103,7 @@ class SLL:
 
 
 my_list=SLL()
-print("List is empty:",my_list.is_empty())
+#print("List is empty:",my_list.is_empty())
 my_list.insert_at_start(23)
 my_list.insert_at_start(5)
 my_list.insert_at_end(15)
