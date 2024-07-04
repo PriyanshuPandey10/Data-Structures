@@ -59,21 +59,55 @@ class CLL:
     def print_all(self):
         if not self.is_empty():
             temp=self.last.next
-            while temp is not self.last:
+            while temp!=self.last:
                 print(temp.item,end=' ')
                 temp=temp.next
             print(temp.item)
 
+    #Define a method delete_first() to delete the first element from a list
+    def delete_first(self):
+        if not self.is_empty():
+            if self.last.next==self.last:
+                self.last=None
+            else:
+                self.last.next=self.last.next.next
 
+    #Define a method  delete_last() to delete the last element from the list
+    def delete_last(self):
+        if not self.is_empty():
+            if self.last.next==self.last:
+                self.last=None
+            else:
+                temp=self.last.next
+                while temp.next == self.last:
+                    temp=temp.next
+                temp.next=self.last.next
+                self.last=temp
 
+    #Define a method delete_item() to delete specified elements from the list
+    def delete_item(self,data):
+        if not self.is_empty():
+            if self.last.next==self.last:
+                if self.last.item==data:
+                    self.last=None
+            else:
+                if self.last.next.item==data:
+                    self.delete_first()
+                else:
+                    temp=self.last.next
 
-
-
-
-
-
-
-
+                    while temp!=self.last:
+                        if temp.next==self.last:
+                            if self.last.item==data:
+                                self.delete_last()
+                            break
+                        if temp.next.item==data:
+                            temp.next=temp.next.next
+                            break
+                        temp=temp.next
+                        
+    
+                    
 
 
 my_list=CLL()
@@ -87,6 +121,12 @@ my_list.insert_at_last(800)
 my_list.insert_at_last(900)
 my_list.insert_at_last(1000)
 my_list.insert_after(700,my_list.search(600))
+my_list.print_all()
+my_list.delete_first()
+my_list.print_all()
+my_list.delete_last()
+my_list.print_all()
+my_list.delete_item(300)
 my_list.print_all()
 
  
