@@ -102,20 +102,20 @@ class SLL:
 
 
 
-my_list=SLL()
-#print("List is empty:",my_list.is_empty())
-my_list.insert_at_start(23)
-my_list.insert_at_start(5)
-my_list.insert_at_end(15)
-my_list.insert_at_end(20)
-my_list.insert_after(my_list.search(5), 100)
-my_list.print_list()
-my_list.delete_first()
-my_list.print_list()
-my_list.delete_last()
-my_list.print_list()
-my_list.delete_item(23)
-my_list.print_list()
+# my_list=SLL()
+# #print("List is empty:",my_list.is_empty())
+# my_list.insert_at_start(23)
+# my_list.insert_at_start(5)
+# my_list.insert_at_end(15)
+# my_list.insert_at_end(20)
+# my_list.insert_after(my_list.search(5), 100)
+# my_list.print_list()
+# my_list.delete_first()
+# my_list.print_list()
+# my_list.delete_last()
+# my_list.print_list()
+# my_list.delete_item(23)
+# my_list.print_list()
 
 
 
