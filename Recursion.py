@@ -23,10 +23,19 @@
 # naturalnumber=printNreverse(5)
 
 #Program to print first n odd natural numbers
-def noddnatural(n):
+# def noddnatural(n):
+#     if (n>0 ):
+#         noddnatural(n-1)
+#         if n%2!=0:
+#             print(n)
+        
+# noddnatural(20)
+
+#Program to print first n even natural numbers
+def nevennatural(n):
     if (n>0 ):
-        noddnatural(n-1)
-        if n%2!=0:
+        nevennatural(n-1)
+        if n%2==0:
             print(n)
         
-noddnatural(20)
+nevennatural(20)
