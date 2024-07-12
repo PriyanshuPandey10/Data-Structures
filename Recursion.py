@@ -42,8 +42,16 @@
 
 
 #Program to print first n odd natural numbers in reverse order
-def oddreverse(n):
+# def oddreverse(n):
+#     if n>0:
+#         print(2*n-1,end=' ')
+#         oddreverse(n-1)
+# oddreverse(20)
+
+
+#Program to print first n odd natural numbers in reverse order
+def evenreverse(n):
     if n>0:
-        print(2*n-1,end=' ')
-        oddreverse(n-1)
-oddreverse(20)
+        print(2*n,end=' ')
+        evenreverse(n-1)
+evenreverse(20)
