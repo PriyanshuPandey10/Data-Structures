@@ -32,10 +32,18 @@
 # noddnatural(20)
 
 #Program to print first n even natural numbers
-def nevennatural(n):
-    if (n>0 ):
-        nevennatural(n-1)
-        if n%2==0:
-            print(n)
+# def nevennatural(n):
+#     if (n>0 ):
+#         nevennatural(n-1)
+#         if n%2==0:
+#             print(n)
         
-nevennatural(20)
+# nevennatural(20)
+
+
+#Program to print first n odd natural numbers in reverse order
+def oddreverse(n):
+    if n>0:
+        print(2*n-1,end=' ')
+        oddreverse(n-1)
+oddreverse(20)
