@@ -14,3 +14,10 @@ def printN(num):
         printN(num-1)
         print(num)
 naturalnumber=printN(5)
+
+#Program to print first N natural numbers in recursive order
+def printNreverse(num):
+    if num>0:
+        print(num)
+        printNreverse(num-1)
+naturalnumber=printNreverse(5)
