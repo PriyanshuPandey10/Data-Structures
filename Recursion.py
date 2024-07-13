@@ -50,8 +50,16 @@
 
 
 #Program to print first n odd natural numbers in reverse order
-def evenreverse(n):
-    if n>0:
-        print(2*n,end=' ')
-        evenreverse(n-1)
-evenreverse(20)
+# def evenreverse(n):
+#     if n>0:
+#         print(2*n,end=' ')
+#         evenreverse(n-1)
+# evenreverse(20)
+
+#Program to print sum of  first n odd natural numbers
+def odd(n):
+    if n==1:
+        return 1
+    return 2*n-1+odd(n-1)
+print("Sum is ",odd(10))
+    
