@@ -57,9 +57,15 @@
 # evenreverse(20)
 
 #Program to print sum of  first n odd natural numbers
-def odd(n):
-    if n==1:
-        return 1
-    return 2*n-1+odd(n-1)
-print("Sum is ",odd(10))
+# def odd(n):
+#     if n==1:
+#         return 1
+#     return 2*n-1+odd(n-1)
+# print("Sum is ",odd(10))
     
+#Program to print sum of  first n even natural numbers
+def even(n):
+    if n==1:
+        return 2
+    return 2*n+even(n-1)
+print("Sum is ",even(10))
