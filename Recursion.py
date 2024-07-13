@@ -64,8 +64,15 @@
 # print("Sum is ",odd(10))
     
 #Program to print sum of  first n even natural numbers
-def even(n):
-    if n==1:
-        return 2
-    return 2*n+even(n-1)
-print("Sum is ",even(10))
+# def even(n):
+#     if n==1:
+#         return 2
+#     return 2*n+even(n-1)
+# print("Sum is ",even(10))
+
+# Program to find the factorial of a number using recursion
+def fact(n):
+    if n==0:
+        return 1
+    return n*fact(n-1)
+print("Factorial is",fact(5))
