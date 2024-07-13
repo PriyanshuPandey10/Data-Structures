@@ -71,8 +71,15 @@
 # print("Sum is ",even(10))
 
 # Program to find the factorial of a number using recursion
-def fact(n):
-    if n==0:
+# def fact(n):
+#     if n==0:
+#         return 1
+#     return n*fact(n-1)
+# print("Factorial is",fact(5))
+
+#Program to find sum of squares of n natural numbers
+def sq(n):
+    if n==1:
         return 1
-    return n*fact(n-1)
-print("Factorial is",fact(5))
+    return n*n +sq(n-1)
+print("Sum of squares is",sq(5))
