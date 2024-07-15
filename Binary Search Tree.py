@@ -68,5 +68,24 @@ class BST:
             current=current.right
         return current.item
     
+    #Method to delete the node from BST
+    def delete(self,data):
+        self.root=self.rdelete(self.root,data)
+    def rdelete(self,root,data):
+        if root is None:
+            return root
+        if data<root.item:
+            root.left=self.rdelete(root.left,data)
+        elif(data>root.item):
+            root.right=self.rdelete(root.right,data)
+        else:
+            if root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
+            root.item=self.min_value(root.right)
+            self.rdelete(root.right,root.item)
+        return root
+
 
     
