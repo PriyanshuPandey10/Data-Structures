@@ -6,6 +6,7 @@ class Node:
 class BST:
     def __init__(self):
         self.root=None
+        
     def insert(self,data):
         self.root=self.rinsert(self.root,data)
     def rinsert(self,root,data):
@@ -86,6 +87,8 @@ class BST:
             root.item=self.min_value(root.right)
             self.rdelete(root.right,root.item)
         return root
+    def size(self):
+        return len(self.inorder())
 
 
     
