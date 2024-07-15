@@ -52,4 +52,13 @@ class BST:
             self.rpostorder(root.left,result)
             self.rpostorder(root.right,result)
             result.append(root.item)
+
+    #Method to find out min value item node
+    def min_value(self,temp):
+        current=temp
+        while current.left is not None:
+            current=current.left
+        return current.item
+    
+
     
