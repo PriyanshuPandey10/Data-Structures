@@ -61,4 +61,12 @@ class BST:
         return current.item
     
 
+    #Method to find out max value item node
+    def max_value(self,temp):
+        current=temp
+        while current.right is not None:
+            current=current.right
+        return current.item
+    
+
     
