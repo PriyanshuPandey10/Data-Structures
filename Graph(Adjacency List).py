@@ -8,3 +8,9 @@ class Graph:
             self.adj_list[v].append((u,weight))
         else:
             print("Invalid Vertex")
+    def remove_edge(self,u,v):
+        if 0<=u<self.vertex_count and 0<=v<self.vertex_count:
+            self.adj_list[u]=[(vertex,weight)for vertex,weight in self.adj_list[u] if vertex!=v]
+            self.adj_list[v]=[(vertex,weight)for vertex,weight in self.adj_list[v] if vertex!=u]
+        else:
+            print("Invalid Vertices")
