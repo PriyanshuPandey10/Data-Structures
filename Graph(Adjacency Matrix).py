@@ -19,6 +19,15 @@ class Graph:
             return self.adj_matrix[u][v]!=0
         else:
             print("Invalid Vertex")
-    def print_ad_matrix(Self):
+    def print_ad_matrix(self):
         for row_list in self.adj_matrix:
             print(" ".join(map(str,row_list)))
+
+
+g=Graph(5)
+g.add_edge(0,1)
+g.add_edge(1,2)
+g.add_edge(1,3)
+g.add_edge(2,3)
+g.add_edge(3,4)
+g.print_ad_matrix()
