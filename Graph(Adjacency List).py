@@ -23,3 +23,11 @@ class Graph:
     def print_adj_list(self):
         for vertex,n in self.adj_list.items():
             print("V",vertex,":",n)
+
+g=Graph(5)
+g.add_edge(0,1)
+g.add_edge(1,2)
+g.add_edge(1,3)
+g.add_edge(2,3)
+g.add_edge(3,4)
+g.print_adj_list()
